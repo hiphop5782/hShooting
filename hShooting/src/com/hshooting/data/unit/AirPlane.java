@@ -25,7 +25,7 @@ public class AirPlane extends Unit{
 		int delay = 0;
 		while(shutdownFlag && isAlive){
 			try{
-				//System.out.println(this);
+				System.out.println(this);
 				Unit u = checkCrash();
 				if(u != null){
 					Point p = MathUtility.getCrashPoint(u.center, u.width, center, width);

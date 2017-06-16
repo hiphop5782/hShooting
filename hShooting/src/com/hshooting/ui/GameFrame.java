@@ -48,7 +48,8 @@ public class GameFrame extends JFrame{
 		//this.addKeyListener(new KeyProcessor());
 		KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
 		manager.addKeyEventDispatcher(new MyDispatcher());
-		this.requestFocus();
+		setFocusableWindowState(true);
+		//this.requestFocus();
 	}
 	
 	@Override
@@ -85,6 +86,7 @@ public class GameFrame extends JFrame{
 	
 	private class MyDispatcher implements KeyEventDispatcher{
 		public boolean dispatchKeyEvent(KeyEvent e) {
+//			System.out.println("key event");
 			if(e.getID() == KeyEvent.KEY_PRESSED){
 				GameData.press(e.getKeyCode());
 			}else if(e.getID() == KeyEvent.KEY_RELEASED){
@@ -127,7 +129,7 @@ public class GameFrame extends JFrame{
 			java.util.TimerTask task = new java.util.TimerTask() {
 				public void run() {
 					instance.repaint();
-					System.out.println(GameData.getAllStringData());
+//					System.out.println(GameData.getAllStringData());
 				}
 			};
 			timer.schedule(task , 0, 1000 / GraphicProperty.fps);

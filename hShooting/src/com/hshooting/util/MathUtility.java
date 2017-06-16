@@ -26,7 +26,7 @@ public class MathUtility {
 		}
 		return getNextPoint(m.getCenterPoint(), angle, speed);
 	}
-	public static boolean checkCrash(Point p1, int r1, Point p2, int r2){
+	public synchronized static boolean checkCrash(Point p1, int r1, Point p2, int r2){
 		int xgap = Math.abs(p1.x - p2.x);
 		int ygap = Math.abs(p1.y - p2.y);
 		double length = Math.sqrt(xgap * xgap + ygap * ygap);

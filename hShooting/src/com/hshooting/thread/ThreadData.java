@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ThreadData {
-	private static ExecutorService service = Executors.newCachedThreadPool();
+	private static ExecutorService service = Executors.newFixedThreadPool(Byte.MAX_VALUE);
 	
 	public static void addService(Runnable r){
 		service.execute(r);

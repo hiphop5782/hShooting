@@ -20,6 +20,7 @@ public class GameData {
 		return presskey;
 	}
 	public static boolean press(Integer v){
+//		System.out.println(presskey);
 		return presskey.add(v);
 	}
 	public static boolean release(Integer v){
@@ -127,13 +128,13 @@ public class GameData {
 	}
 	public static String getAllStringData() {
 		String str = "";
-		str += "스레드 개수 : "+Thread.activeCount()+"\n";
-		str += "입력 키 정보 : "+presskey.toString()+"\n";
-		str += "===[비행기 정보]===\n";
-		str += getPlane().toString()+"\n";
-		str += "몬스터 개수 : "+enemylist.size()+"\n";
-		str += "미사일 개수 : "+missilelist.size()+"\n";
-		str += "이펙트 개수 : "+effectlist.size()+"\n";
+//		str += "스레드 개수 : "+Thread.activeCount()+"\n";
+//		str += "입력 키 정보 : "+presskey.toString()+"\n";
+//		str += "===[비행기 정보]===\n";
+//		str += getPlane().toString()+"\n";
+//		str += "몬스터 개수 : "+enemylist.size()+"\n";
+//		str += "미사일 개수 : "+missilelist.size()+"\n";
+//		str += "이펙트 개수 : "+effectlist.size()+"\n";
 		return str;
 	}
 }
